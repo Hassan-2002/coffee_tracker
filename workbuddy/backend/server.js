@@ -9,7 +9,7 @@ app.use((req,res,next) => {
         next()
 })
 app.use(workoutsRoutes)
-app.listen(5000, (req,res) => {
-    console.log('listening on port 5000');
+app.listen(process.env.PORT, () => {
+    console.log('listening on port', process.env.PORT);
 });
 
